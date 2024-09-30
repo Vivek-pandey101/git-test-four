@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Outfit, Poppins, Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-image: url("./images/bg-main-desktop.png");
+  background-repeat: no-repeat;
+  background-size: 500px;
+}
+
+.main-container {
+  display: flex;
+  justify-content: space-evenly;
+  padding-right: 20px;
+}
+
+.main-container .images {
+  display: flex;
+  flex-direction: column;
+  margin: 150px 230px;
+  gap: 30px;
+  width: 400px;
+}
+
+.main-container .images img + img {
+  margin-left: 80px;
+}
+
+.main-container img {
+  width: 350px;
+}
+
+.front {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 150px;
+  left: 230px;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  width: 350px;
+}
+
+.circle {
+  display: flex;
+  align-items: center;
+  padding: 25px;
+  gap: 10px;
+}
+
+.card-number {
+  margin: 30px 0 20px;
+  text-align: center;
+  font-size: 1.3rem;
+  letter-spacing: 3px;
+}
+
+.name {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+  font-size: 0.8rem;
+}
+
+.overlay p:first-child {
+  height: 30px;
+  width: 30px;
+  background: white;
+  border-radius: 50%;
+}
+.overlay p + p {
+  height: 15px;
+  width: 15px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.back {
+  position: relative;
+}
+
+.overlayTwo {
+  position: absolute;
+  margin: 455px 585px;
+  letter-spacing: 3px;
+  color: white;
+}
+
+form {
+  width: 300px;
+  margin: auto 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input {
+  height: 40px;
+  outline: none;
+  width: 100%;
+  margin-top: 5px;
+  padding-left: 15px;
+  border-radius: 8px;
+  border: 1px solid gray;
+  font-size: 1rem;
+}
+
+button {
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  background: hsl(278, 68%, 11%);
+  cursor: pointer;
+}
+
+.card-details {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.date {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.date input {
+  width: 60px;
+}
+
+.cvvnumber {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+  body {
+    background-size: 400px 100vh;
+  }
+  .main-container .images {
+    margin: 150px 100px;
+    gap: 20px;
+  }
+  .overlay {
+    top: 150px;
+    left: 100px;
+    width: 350px;
+  }
+  .overlayTwo {
+    margin: 445px 450px;
+  }
+}
+@media (min-width: 860px) and (max-width: 1000px) {
+  body {
+    background-size: 300px 100vh;
+  }
+  .main-container .images {
+    margin: 150px 50px;
+    gap: 20px;
+  }
+  .overlay {
+    top: 150px;
+    left: 50px;
+    width: 350px;
+  }
+  .overlayTwo {
+    margin: 445px 360px;
+  }
+  .images {
+    width: 300px;
+  }
+  .main-container .images img + img {
+    margin-left: 40px;
+  }
+}
+@media (min-width: 480px) and (max-width: 860px) {
+  body {
+    background-size: 100vw 40vh;
+  }
+  .main-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-container .images {
+    margin: 30px auto;
+    gap: 20px;
+  }
+  .overlay {
+    top: 30px;
+    left: 210px;
+    width: 350px;
+  }
+  .overlayTwo {
+    margin: 325px 520px;
+  }
+  form {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
+}
+@media (max-width: 480px) {
+  body {
+    background-size: 100% 25vh;
+  }
+  .main-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .images:first-child {
+    margin: 100px 0 0 15px;
+  }
+  .overlay {
+    top: 80px;
+    left: 15px;
+    width: 250px;
+  }
+  .card-number {
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+  .images img {
+    width: 250px;
+  }
+  .images img + img {
+    margin: -240px 0 0 0;
+    z-index: -1;
+  }
+  .overlayTwo {
+    margin: 23px 0 0 270px;
+    z-index: -1;
+  }
+  form {
+    position: absolute;
+    bottom: 160px;
+    width: 100%;
+  }
+  .form-section{
+    margin: 0 auto;
+  }
+  .form-section button{
+    width: 100%;
+    margin-top: 15px;
+  }
+}

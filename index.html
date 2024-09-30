@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Syne:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="images">
+        <img
+          class="front"
+          src="./images/bg-card-front.png"
+          alt="Image not available"
+        />
+        <img
+          class="back"
+          src="./images/bg-card-back.png"
+          alt="Image not available"
+        />
+      </div>
+      <div class="overlay">
+        <div class="circle">
+          <p></p>
+          <p></p>
+        </div>
+        <p class="card-number">0000 0000 0000 0000</p>
+        <div class="name"><span>JANE APPLESEED</span><span>00/00</span></div>
+      </div>
+      <div class="overlayTwo">
+        <span>000</span>
+      </div>
+      <form action="submit">
+        <div style="width: 300px" class="form-section">
+          <div>
+            <label for="name">CARDHOLDER NAME</label>
+            <input type="text" placeholder="e.g. Jane Appleseed" required />
+          </div>
+          <div>
+            <label for="name">CARD NUMBER</label>
+            <input
+              type="text"
+              placeholder="e.g. 1234 5678 9123 0000"
+              required
+            />
+          </div>
+          <div class="card-details">
+            <div class="date">
+              <label for="name">EXP. DATE (MM/YY)</label>
+              <div style="display: flex; gap: 10px">
+                <input type="text" placeholder="MM" maxlength="2" required />
+                <input type="text" placeholder="YY" maxlength="2" required />
+              </div>
+            </div>
+            <div class="cvvnumber">
+              <label for="name">CVV</label>
+              <input type="text" placeholder="e.g. 123" required />
+            </div>
+          </div>
+          <button type="submit">Confirm</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- 0000 0000 0000 0000 Jane Appleseed 00/00 000 Cardholder Name e.g. Jane
+    Appleseed Card Number e.g. 1234 5678 9123 0000 Exp. Date (MM/YY) MM YY CVC
+    e.g. 123 Confirm
+
+    Completed state start
+
+    Thank you! We've added your card details Continue
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>
